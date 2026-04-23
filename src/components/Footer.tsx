@@ -22,7 +22,7 @@ export default function Footer() {
                 AIK <span className="text-brand">콘텐츠</span>
               </span>
             </div>
-            <p className="text-black/50 text-[15.84px] font-medium tracking-[-0.05em] max-w-lg">
+            <p className="text-black/50 text-[16.5px] font-medium tracking-[-0.05em] max-w-lg">
               AIK 콘텐츠에게 최고의 브랜드는 바로 여러분입니다.
             </p>
           </div>
