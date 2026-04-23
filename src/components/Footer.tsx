@@ -12,7 +12,7 @@ export default function Footer() {
             <div className="flex items-center gap-3">
               <div className="w-8 h-8 flex items-center justify-center overflow-hidden rounded-sm">
                 <img 
-                  src="https://lh3.googleusercontent.com/u/0/d/1cdXX4dH2mytWkM9pUae7ebviCLUfb5Ds" 
+                  src="https://lh3.googleusercontent.com/u/0/d/1GiD-VxAICx2-Uav_IBm0pZzI5cmWzLuD" 
                   alt="AIK 콘텐츠 로고" 
                   className="w-full h-full object-contain"
                   referrerPolicy="no-referrer"
