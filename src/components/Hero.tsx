@@ -174,7 +174,7 @@ export default function Hero() {
             </a>
             <a 
               href="#contact"
-              className="w-full sm:w-auto px-12 py-5 border border-black/10 text-black/80 font-bold uppercase tracking-widest hover:border-brand hover:text-brand transition-all rounded-full backdrop-blur-sm"
+              className="w-full sm:w-auto px-12 py-5 bg-white text-black border border-black/10 font-bold uppercase tracking-widest hover:bg-[#0c468c] hover:text-white hover:border-[#0c468c] transition-all rounded-full shadow-lg shadow-black/5"
             >
               제작 문의하기
             </a>
