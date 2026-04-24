@@ -54,8 +54,8 @@ export default function Contact() {
             </h2>
             
             <div>
-              <p className="inline-block px-6 py-3 text-[1.35rem] font-display font-bold tracking-[-0.03em] bg-[#0c468c] text-white rounded-lg shadow-xl">문의 : aik@aikcontents.kr</p>
-              <p className="mt-4 text-[0.96rem] text-black font-sans">
+              <p className="inline-block px-6 py-3 text-[1.35rem] font-display font-bold tracking-[-0.03em] bg-black/65 text-white rounded-lg shadow-xl">문의 : aik@aikcontents.kr</p>
+              <p className="mt-3 inline-block px-4 py-2 text-[0.935rem] bg-black/[0.13] text-black font-sans rounded-lg">
                 AIK 콘텐츠는 이메일, 온라인 문의 이후 전화상담이 진행됩니다.
               </p>
             </div>
