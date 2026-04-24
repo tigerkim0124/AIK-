@@ -17,12 +17,28 @@
   font-style: normal;
 }
 
+@font-face {
+  font-family: 'NanumBarunGothic';
+  src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_two@1.0/NanumBarunGothic.woff') format('woff');
+  font-weight: 400;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'NanumBarunGothic';
+  src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_two@1.0/NanumBarunGothicBold.woff') format('woff');
+  font-weight: 700;
+  font-style: normal;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Nanum+Myeongjo:wght@400;700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500&display=swap');
 @import "tailwindcss";
 
 @theme {
   --font-sans: "GmarketSans", ui-sans-serif, system-ui, sans-serif;
+  --font-barun: "NanumBarunGothic", sans-serif;
   --font-display: "GmarketSans", sans-serif;
+  --font-serif: "Nanum Myeongjo", serif;
   --font-mono: "JetBrains Mono", ui-monospace, SFMono-Regular, monospace;
   
   --color-brand: #0047AB; /* AIK Royal Blue */
