@@ -156,7 +156,7 @@ export default function Hero() {
             className="max-w-3xl mx-auto text-[0.92rem] md:text-[1.04rem] lg:text-[1.17rem] text-black/80 font-display font-medium leading-relaxed tracking-normal"
           >
             - 우리는 AI기술의 정점에서 따뜻한 인간의 감성을 더합니다 -<br className="hidden md:block" />
-            - 우리는 <span className="font-bold text-[1.08rem] md:text-[1.22rem] lg:text-[1.37rem]">따뜻한 디지털 영상 경험</span>을 설계합니다 -
+            - 우리는 <span className="font-bold text-[1.08rem] md:text-[1.22rem] lg:text-[1.37rem] text-[#8d5e03]">따뜻한 디지털 영상 경험</span>을 설계합니다 -
           </motion.p>
           
           <motion.div 
