@@ -13,7 +13,7 @@ export default function Contact() {
     const formData = new FormData(form);
 
     try {
-      const response = await fetch("https://formspree.io/f/mdayybwl", {
+      const response = await fetch("https://formspree.io/f/xpqkkedl", {
         method: "POST",
         body: formData,
         headers: {
@@ -49,8 +49,8 @@ export default function Contact() {
             
             <div>
               <p className="text-black/40 font-sans font-medium text-xs uppercase tracking-[-0.02em] mb-4">문의</p>
-              <p className="text-2xl font-display font-medium tracking-[-0.03em] text-black">aik@aikcontents.com</p>
-              <p className="mt-4 text-sm text-black/60 font-sans">
+              <p className="text-2xl font-display font-medium tracking-[-0.03em] text-black">aik@aikcontents.kr</p>
+              <p className="mt-4 text-sm text-black font-sans">
                 AIK 콘텐츠는 이메일, 온라인 문의 이후 전화상담이 진행됩니다.
               </p>
             </div>
@@ -201,7 +201,7 @@ export default function Contact() {
                           exit={{ opacity: 0 }}
                           className="mt-6 text-xs text-red-500 text-center font-bold uppercase tracking-tight"
                         >
-                          전송에 실패했습니다. <a href="mailto:aik@aikcontents.com" className="underline underline-offset-4">aik@aikcontents.com</a>으로 직접 문의 부탁드립니다.
+                          전송에 실패했습니다. <a href="mailto:aik@aikcontents.kr" className="underline underline-offset-4">aik@aikcontents.kr</a>으로 직접 문의 부탁드립니다.
                         </motion.p>
                       )}
                     </AnimatePresence>

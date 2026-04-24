@@ -8,24 +8,18 @@ export default function Footer() {
     <footer className="bg-white py-8 border-t border-black/5">
       <div className="max-w-7xl mx-auto px-6">
         <div className="flex flex-col md:flex-row justify-between items-start md:items-center gap-12">
-          <div className="space-y-4">
-            <a href="https://aikcontents.kr/" className="flex items-center gap-4 hover:opacity-80 transition-opacity">
-              <div className="w-[75px] h-[75px] flex items-center justify-center overflow-hidden rounded-sm">
-                <img 
-                  src="https://lh3.googleusercontent.com/u/0/d/1cdXX4dH2mytWkM9pUae7ebviCLUfb5Ds" 
-                  alt="AIK 콘텐츠 로고" 
-                  className="w-full h-full object-contain"
-                  referrerPolicy="no-referrer"
-                />
-              </div>
-              <span className="font-display font-bold text-[1.3rem] tracking-tight uppercase text-black">
-                AIK <span className="text-brand">콘텐츠</span>
-              </span>
-            </a>
-            <p className="text-black/50 text-[16.5px] font-medium tracking-[-0.05em] max-w-lg">
-              AIK 콘텐츠에게 최고의 브랜드는 바로 여러분입니다.
+          <a href="https://aikcontents.kr/" className="flex flex-col sm:flex-row sm:items-center gap-4 hover:opacity-80 transition-opacity">
+            <img 
+              src="https://lh3.googleusercontent.com/d/1jD8BUIBu-rhvg_kPqt7Id_wWPuKmjpda" 
+              alt="AIK Contents" 
+              style={{ width: '90px' }}
+              className="object-contain"
+              referrerPolicy="no-referrer"
+            />
+            <p className="text-black tracking-[-0.05em] max-w-lg">
+              <span className="text-[23.567px] font-bold">AIK 콘텐츠</span><span className="text-[17.419px] font-medium">에게 최고의 브랜드는 바로 여러분입니다.</span>
             </p>
-          </div>
+          </a>
 
           <div className="flex gap-8">
             <a 
@@ -43,7 +37,7 @@ export default function Footer() {
 
         <div className="mt-12 pt-8 border-t border-black/5 flex flex-col md:flex-row justify-end items-center gap-6">
           
-          <p className="text-[10px] font-mono uppercase tracking-widest text-black/20">
+          <p className="text-[15px] font-sans font-medium tracking-normal text-[#8b8c8e]">
             © {currentYear} AIK 콘텐츠. All rights reserved.
           </p>
         </div>

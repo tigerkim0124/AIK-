@@ -28,12 +28,12 @@ export default function Header() {
             { label: '회사소개', id: 'about' },
             { label: '서비스', id: 'services' },
             { label: '포트폴리오', id: 'portfolio' },
-            { label: '저가형 AI영상상품 예시', id: 'ai-products' }
+            { label: '저가형 AI영상 예시', id: 'ai-products' }
           ].map((item) => (
             <a
               key={item.id}
               href={`#${item.id}`}
-              className="text-sm font-medium text-black/60 hover:text-black transition-colors uppercase tracking-[-0.03em]"
+              className="text-[1.087rem] font-medium text-black/60 hover:text-black transition-colors uppercase tracking-[-0.03em]"
             >
               {item.label}
             </a>

@@ -5,6 +5,11 @@ export default function Hero() {
     <section className="relative h-screen w-full overflow-hidden flex items-center justify-center bg-white isolate">
       {/* Background Elements - Absolute lowest layer */}
       <div className="absolute inset-0 -z-10 bg-white">
+        {/* User Requested Hero Background Image */}
+        <div 
+          className="absolute inset-0 opacity-15 bg-cover bg-center bg-no-repeat"
+          style={{ backgroundImage: 'url("https://lh3.googleusercontent.com/d/1SrN0delqq88m2P0ZtIS7Ous7glsRLrSF")' }}
+        />
         {/* Technical Grid Strategy */}
         <div className="absolute inset-0 bg-[linear-gradient(to_right,#00000003_1px,transparent_1px),linear-gradient(to_bottom,#00000003_1px,transparent_1px)] bg-[size:20px_20px]" />
         <div className="absolute inset-0 bg-[linear-gradient(to_right,#00000008_1px,transparent_1px),linear-gradient(to_bottom,#00000008_1px,transparent_1px)] bg-[size:100px_100px]" />
@@ -148,7 +153,7 @@ export default function Hero() {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.5, duration: 0.8 }}
-            className="max-w-3xl mx-auto text-base md:text-lg lg:text-xl text-black/80 font-sans font-medium leading-relaxed tracking-[-0.1em]"
+            className="max-w-3xl mx-auto text-[1.02rem] md:text-[1.16rem] lg:text-[1.3rem] text-black/80 font-display font-medium leading-relaxed tracking-normal"
           >
             - 우리는 AI기술의 정점에서 따뜻한 인간의 감성을 더합니다 -<br className="hidden md:block" />
             - 우리는 따뜻한 디지털 영상 경험을 설계합니다 -

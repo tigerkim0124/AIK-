@@ -113,8 +113,9 @@ export default function Portfolio() {
             <span className="font-sans font-medium text-brand text-sm uppercase tracking-[-0.02em] block mb-4">03 // Track Record</span>
             <h2 className="text-5xl md:text-6xl font-display font-bold tracking-[-0.05em] uppercase text-black">주요 프로젝트</h2>
           </div>
-          <p className="text-black/40 max-w-md text-sm font-sans font-medium tracking-[-0.02em] leading-relaxed">
-            AIK 콘텐츠는 글로벌 프로젝트, 정부기관, 대기업 및 대형 제작사, 대행사와 함께 한 역량을 가지고 있습니다.
+          <p className="text-[#676868] max-w-md text-[14.84px] font-sans font-medium tracking-[-0.02em] leading-relaxed">
+            AIK 콘텐츠는 글로벌 프로젝트, 정부기관, 대기업 및 <br />
+            대형 제작사, 대행사와 함께 한 역량을 가지고 있습니다.
           </p>
         </div>
 
@@ -158,7 +159,7 @@ export default function Portfolio() {
               <span className="font-sans font-medium text-brand text-sm uppercase tracking-[-0.02em] block mb-4">04 // AI Products</span>
               <h2 className="text-5xl md:text-6xl font-display font-bold tracking-[-0.05em] uppercase text-black">저가형 AI영상 예시</h2>
             </div>
-            <p className="text-black/40 max-w-md text-sm font-sans font-medium tracking-[-0.02em] leading-relaxed">
+            <p className="text-[#676868] max-w-md text-[14.84px] font-sans font-medium tracking-[-0.02em] leading-relaxed">
               AIK 콘텐츠의 합리적 가격의 AI영상 솔루션을 만나보세요. <br />
               - 아래의 영상은 100% AI로 제작되었습니다 -
             </p>
@@ -188,7 +189,7 @@ export default function Portfolio() {
                     <h3 className="text-2xl font-sans font-bold text-black group-hover:text-[#0c468c] transition-colors tracking-[-0.03em]">{product.title}</h3>
                   </div>
                   <div className="text-right hidden sm:block">
-                    <p className="text-[13.1px] text-black uppercase tracking-[-0.03em] font-sans font-medium">저가형 AI영상상품 예시</p>
+                    <p className="text-[13.1px] text-black uppercase tracking-[-0.03em] font-sans font-medium">저가형 AI영상 예시</p>
                   </div>
                 </div>
                 

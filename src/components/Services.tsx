@@ -28,7 +28,7 @@ const services = [
   },
   {
     icon: <Sparkles size={24} />,
-    title: "중소기업&소상공인을 위한 영상서비스",
+    title: "중소기업 & 소상공인을 위한 영상서비스",
     content: "소상공인 및 중소기업을 위해 제작 장벽을 낮춘 초저가 AI 영상 제작 패키지를 제공합니다.",
     tag: "SME 특별 플랜",
     bgImage: "https://lh3.googleusercontent.com/u/0/d/1Pm77MYSd94kIy4210G1dXUYO1Fz5xtEJ",
@@ -45,7 +45,7 @@ export default function Services() {
             <span className="font-sans font-medium text-brand text-sm uppercase tracking-[-0.02em] block mb-4">02 // Services</span>
             <h2 className="text-5xl md:text-6xl font-display font-bold tracking-tighter uppercase text-black">주요 서비스</h2>
           </div>
-          <p className="text-black/40 max-w-md text-sm font-sans font-medium tracking-[-0.02em] leading-relaxed">
+          <p className="text-[#676868] max-w-md text-[14.84px] font-sans font-medium tracking-[-0.02em] leading-relaxed">
             AIK 콘텐츠는 고도화된 AI 파이프라인을 통해 <br />
             모든 예산 범위에서 최상의 영상 솔루션을 제안합니다.
           </p>
