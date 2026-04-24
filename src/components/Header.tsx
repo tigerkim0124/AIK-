@@ -9,7 +9,7 @@ export default function Header() {
       className="fixed top-0 left-0 w-full z-50 glass border-b border-black/5"
     >
       <div className="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
-        <div className="flex items-center gap-4">
+        <a href="https://aikcontents.kr/" className="flex items-center gap-4 hover:opacity-80 transition-opacity">
           <div className="w-[70px] h-[70px] flex items-center justify-center overflow-hidden rounded-sm">
             <img 
               src="https://lh3.googleusercontent.com/u/0/d/1cdXX4dH2mytWkM9pUae7ebviCLUfb5Ds" 
@@ -18,10 +18,10 @@ export default function Header() {
               referrerPolicy="no-referrer"
             />
           </div>
-          <span className="font-display font-bold text-xl tracking-tight uppercase text-black">
+          <span className="font-display font-bold text-[1.45rem] tracking-tight uppercase text-black">
             AIK <span className="text-brand">콘텐츠</span>
           </span>
-        </div>
+        </a>
         
         <nav className="hidden md:flex items-center gap-10">
           {[

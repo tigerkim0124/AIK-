@@ -9,19 +9,19 @@ export default function Footer() {
       <div className="max-w-7xl mx-auto px-6">
         <div className="flex flex-col md:flex-row justify-between items-start md:items-center gap-12">
           <div className="space-y-4">
-            <div className="flex items-center gap-3">
-              <div className="w-8 h-8 flex items-center justify-center overflow-hidden rounded-sm">
+            <a href="https://aikcontents.kr/" className="flex items-center gap-4 hover:opacity-80 transition-opacity">
+              <div className="w-[75px] h-[75px] flex items-center justify-center overflow-hidden rounded-sm">
                 <img 
-                  src="https://lh3.googleusercontent.com/u/0/d/1GiD-VxAICx2-Uav_IBm0pZzI5cmWzLuD" 
+                  src="https://lh3.googleusercontent.com/u/0/d/1cdXX4dH2mytWkM9pUae7ebviCLUfb5Ds" 
                   alt="AIK 콘텐츠 로고" 
                   className="w-full h-full object-contain"
                   referrerPolicy="no-referrer"
                 />
               </div>
-              <span className="font-display font-bold text-lg tracking-tight uppercase text-black">
+              <span className="font-display font-bold text-[1.3rem] tracking-tight uppercase text-black">
                 AIK <span className="text-brand">콘텐츠</span>
               </span>
-            </div>
+            </a>
             <p className="text-black/50 text-[16.5px] font-medium tracking-[-0.05em] max-w-lg">
               AIK 콘텐츠에게 최고의 브랜드는 바로 여러분입니다.
             </p>

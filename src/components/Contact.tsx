@@ -13,7 +13,7 @@ export default function Contact() {
     const formData = new FormData(form);
 
     try {
-      const response = await fetch("https://formspree.io/f/mdaypreg", {
+      const response = await fetch("https://formspree.io/f/xnjlldro", {
         method: "POST",
         body: formData,
         headers: {
@@ -99,7 +99,7 @@ export default function Contact() {
                 >
                   <div className="grid md:grid-cols-2 gap-8">
                     <div className="space-y-2">
-                      <label className="text-[10px] font-mono uppercase tracking-[0.2em] text-black/40">업체명 (성함)</label>
+                      <label className="text-[11px] font-sans font-medium uppercase tracking-[-0.1em] text-black/40">업체명 (성함)</label>
                       <input 
                         type="text" 
                         name="company_name"
@@ -109,7 +109,7 @@ export default function Contact() {
                       />
                     </div>
                     <div className="space-y-2">
-                      <label className="text-[10px] font-mono uppercase tracking-[0.2em] text-black/40">연락처</label>
+                      <label className="text-[11px] font-sans font-medium uppercase tracking-[-0.1em] text-black/40">연락처</label>
                       <input 
                         type="text" 
                         name="contact_info"
@@ -122,7 +122,7 @@ export default function Contact() {
 
                   <div className="grid md:grid-cols-2 gap-8">
                     <div className="space-y-2">
-                      <label className="text-[10px] font-mono uppercase tracking-[0.2em] text-black/40">예상 예산</label>
+                      <label className="text-[11px] font-sans font-medium uppercase tracking-[-0.1em] text-black/40">예상 예산</label>
                       <select 
                         name="budget"
                         required
@@ -135,7 +135,7 @@ export default function Contact() {
                       </select>
                     </div>
                     <div className="space-y-2">
-                      <label className="text-[10px] font-mono uppercase tracking-[0.2em] text-black/40">제작 목적</label>
+                      <label className="text-[11px] font-sans font-medium uppercase tracking-[-0.1em] text-black/40">제작 목적</label>
                       <input 
                         type="text" 
                         name="purpose"
@@ -147,7 +147,7 @@ export default function Contact() {
                   </div>
 
                   <div className="space-y-2">
-                    <label className="text-[10px] font-mono uppercase tracking-[0.2em] text-black/40">레퍼런스 링크</label>
+                    <label className="text-[11px] font-sans font-medium uppercase tracking-[-0.1em] text-black/40">레퍼런스 링크</label>
                     <input 
                       type="url" 
                       name="reference_link"

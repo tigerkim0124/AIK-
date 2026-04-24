@@ -156,7 +156,7 @@ export default function Portfolio() {
           <div className="flex flex-col md:flex-row md:items-end justify-between mb-20 gap-8">
             <div>
               <span className="font-sans font-medium text-brand text-sm uppercase tracking-[-0.02em] block mb-4">04 // AI Products</span>
-              <h2 className="text-5xl md:text-6xl font-display font-bold tracking-[-0.05em] uppercase text-black">저가형 AI영상상품 예시</h2>
+              <h2 className="text-5xl md:text-6xl font-display font-bold tracking-[-0.05em] uppercase text-black">저가형 AI영상 예시</h2>
             </div>
             <p className="text-black/40 max-w-md text-sm font-sans font-medium tracking-[-0.02em] leading-relaxed">
               AIK 콘텐츠의 합리적 가격의 AI영상 솔루션을 만나보세요. <br />
