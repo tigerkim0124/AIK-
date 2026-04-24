@@ -167,7 +167,7 @@ export default function Hero() {
           >
             <a 
               href="#portfolio"
-              className="group relative w-full sm:w-auto px-12 py-5 bg-black text-white font-bold uppercase tracking-widest transition-all rounded-full overflow-hidden shadow-xl shadow-black/10"
+              className="group relative w-full sm:w-auto px-12 py-5 bg-[#0c468c] text-white font-bold uppercase tracking-widest transition-all rounded-full overflow-hidden shadow-xl shadow-[#0c468c]/10"
             >
               <span className="relative z-10 group-hover:text-black transition-colors duration-300">포트폴리오 보기</span>
               <div className="absolute inset-0 bg-white translate-y-full group-hover:translate-y-0 transition-transform duration-300 ease-out" />
