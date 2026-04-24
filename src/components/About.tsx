@@ -36,7 +36,7 @@ export default function About() {
               <span className="opacity-20">MEETS</span> INNOVATION
             </h2>
             <div className="h-px w-20 bg-brand mb-8" />
-            <p className="text-base text-black/60 leading-relaxed max-w-xl font-sans font-medium tracking-[-0.02em]">
+            <p className="text-[0.9rem] text-black/60 leading-relaxed max-w-xl font-sans font-medium tracking-[-0.02em]">
               AIK 콘텐츠는 영상 제작의 본질인 '전문성'과 시대의 흐름인 '혁신'이 만나는 지점에 있습니다. 우리는 AI와 10년 이상 쌓아온 대한민국(KOREA) 스텝진의 경험이 만나 새로운 시각적 상상 그리고 따뜻한 안정감을 선사합니다.
             </p>
           </motion.div>
@@ -54,7 +54,7 @@ export default function About() {
                 <div className="mt-1">{item.icon}</div>
                 <div>
                   <h3 className="text-[1.3rem] font-sans font-bold mb-2 tracking-[-0.02em] text-[#0c468c] [word-spacing:-0.05em]">{item.title}</h3>
-                  <p className="text-black/70 text-[1.04rem] leading-relaxed font-medium tracking-[-0.03em] [word-spacing:-0.05em]">{item.description}</p>
+                  <p className="text-black/70 text-[0.92rem] leading-relaxed font-medium tracking-[-0.03em] [word-spacing:-0.05em]">{item.description}</p>
                 </div>
               </motion.div>
             ))}
