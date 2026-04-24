@@ -4,17 +4,17 @@ import { useEffect, useRef } from 'react';
 
 const strengths = [
   {
-    icon: <History className="text-[#0c468c]" size={32} />,
+    icon: <History className="text-[#8d5e03]" size={32} />,
     title: "오로지 영상과 함께 해 온 삶",
     description: "TVCF부터 글로벌 대형 프로젝트까지, 10년 이상 검증된 전문 연출팀의 노하우를 보유하고 있습니다."
   },
   {
-    icon: <Cpu className="text-[#0c468c]" size={32} />,
+    icon: <Cpu className="text-[#8d5e03]" size={32} />,
     title: "독자적 AI 파이프라인",
     description: "제작 기간 단축과 비용 절감을 실현하는 동시에, 표현의 한계를 허무는 AI 기술을 실무에 적용합니다."
   },
   {
-    icon: <Film className="text-[#0c468c]" size={32} />,
+    icon: <Film className="text-[#8d5e03]" size={32} />,
     title: "누구나 가질 수 있는 시네마 퀄리티",
     description: "합리적 가격의 AI 고품질 후보정과 연출로 영화 같은 느낌을 보장합니다."
   }
@@ -53,7 +53,7 @@ export default function About() {
               >
                 <div className="mt-1">{item.icon}</div>
                 <div>
-                  <h3 className="text-[1.3rem] font-sans font-bold mb-2 tracking-[-0.02em] text-[#0c468c] [word-spacing:-0.05em]">{item.title}</h3>
+                  <h3 className="text-[1.3rem] font-sans font-bold mb-2 tracking-[-0.1em] text-[#8d5e03] [word-spacing:-0.06em]">{item.title}</h3>
                   <p className="text-black text-[0.94rem] leading-relaxed font-medium tracking-[-0.033em] [word-spacing:-0.055em]">{item.description}</p>
                 </div>
               </motion.div>
