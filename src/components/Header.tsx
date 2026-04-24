@@ -33,7 +33,7 @@ export default function Header() {
             <a
               key={item.id}
               href={`#${item.id}`}
-              className="text-[1.087rem] font-medium text-black/60 hover:text-black transition-colors uppercase tracking-[-0.03em]"
+              className="text-[1rem] font-medium text-black/60 hover:text-black hover:font-bold transition-all uppercase tracking-[-0.03em]"
             >
               {item.label}
             </a>
