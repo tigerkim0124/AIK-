@@ -13,7 +13,7 @@ export default function Contact() {
     const formData = new FormData(form);
 
     try {
-      const response = await fetch("https://formspree.io/f/xnjlldro", {
+      const response = await fetch("https://formspree.io/f/mdayybwl", {
         method: "POST",
         body: formData,
         headers: {
@@ -60,8 +60,11 @@ export default function Contact() {
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            className="glass p-10 md:p-14 rounded-sm border-black/5 min-h-[400px] flex flex-col justify-center"
+            className="backdrop-blur-xl bg-white/60 p-10 md:p-14 rounded-2xl border border-black/5 shadow-[0_32px_64px_-16px_rgba(0,0,0,0.1)] min-h-[500px] flex flex-col justify-center relative overflow-hidden"
           >
+            {/* Decorative background element for the form */}
+            <div className="absolute top-0 right-0 w-32 h-32 bg-brand/5 blur-3xl -z-10 rounded-full translate-x-1/2 -translate-y-1/2" />
+            
             <AnimatePresence mode="wait">
               {status === 'success' ? (
                 <motion.div
@@ -69,21 +72,23 @@ export default function Contact() {
                   initial={{ opacity: 0, scale: 0.9 }}
                   animate={{ opacity: 1, scale: 1 }}
                   exit={{ opacity: 0, scale: 0.9 }}
-                  className="text-center space-y-6"
+                  className="text-center space-y-8 py-10"
                 >
                   <div className="flex justify-center">
-                    <CheckCircle2 size={64} className="text-brand" />
+                    <div className="w-20 h-20 bg-brand/10 rounded-full flex items-center justify-center">
+                      <CheckCircle2 size={40} className="text-brand" />
+                    </div>
                   </div>
-                  <div className="space-y-2">
-                    <h3 className="text-2xl font-display font-bold text-black">신청이 완료되었습니다</h3>
-                    <p className="text-black/60 font-sans">
+                  <div className="space-y-3">
+                    <h3 className="text-3xl font-display font-bold text-black tracking-tight">신청이 완료되었습니다</h3>
+                    <p className="text-black/60 font-sans text-base leading-relaxed">
                       담당자가 확인 후 빠른 시일 내에 <br />
                       기재해주신 연락처로 안내해 드리겠습니다.
                     </p>
                   </div>
                   <button 
                     onClick={() => setStatus('idle')}
-                    className="text-sm font-sans font-medium text-brand hover:underline"
+                    className="px-8 py-3 rounded-full border border-black/10 text-sm font-sans font-semibold text-black hover:bg-black hover:text-white transition-all duration-300"
                   >
                     새로운 문의 작성하기
                   </button>
@@ -95,79 +100,111 @@ export default function Contact() {
                   animate={{ opacity: 1 }}
                   exit={{ opacity: 0 }}
                   onSubmit={handleSubmit} 
-                  className="space-y-8"
+                  className="space-y-10"
                 >
-                  <div className="grid md:grid-cols-2 gap-8">
-                    <div className="space-y-2">
-                      <label className="text-[11px] font-sans font-medium uppercase tracking-[-0.1em] text-black/40">업체명 (성함)</label>
+                  <div className="grid md:grid-cols-2 gap-10">
+                    <div className="relative group">
+                      <label className="text-[10px] font-sans font-bold uppercase tracking-widest text-black/40 block mb-1">Company / Name</label>
                       <input 
                         type="text" 
                         name="company_name"
                         required
-                        placeholder="예: AIK 글로벌" 
-                        className="w-full bg-transparent border-b border-black/10 py-3 focus:border-brand outline-none transition-colors text-sm text-black"
+                        placeholder="업체명 또는 성함" 
+                        className="w-full bg-transparent border-b-2 border-black/5 py-4 focus:border-brand outline-none transition-all duration-300 text-base text-black placeholder:text-black/20 font-medium"
                       />
+                      <div className="absolute bottom-0 left-0 w-0 h-0.5 bg-brand transition-all duration-300 group-focus-within:w-full" />
                     </div>
-                    <div className="space-y-2">
-                      <label className="text-[11px] font-sans font-medium uppercase tracking-[-0.1em] text-black/40">연락처</label>
+                    <div className="relative group">
+                      <label className="text-[10px] font-sans font-bold uppercase tracking-widest text-black/40 block mb-1">Contact</label>
                       <input 
                         type="text" 
                         name="contact_info"
                         required
                         placeholder="이메일 또는 전화번호" 
-                        className="w-full bg-transparent border-b border-black/10 py-3 focus:border-brand outline-none transition-colors text-sm text-black"
+                        className="w-full bg-transparent border-b-2 border-black/5 py-4 focus:border-brand outline-none transition-all duration-300 text-base text-black placeholder:text-black/20 font-medium"
                       />
+                      <div className="absolute bottom-0 left-0 w-0 h-0.5 bg-brand transition-all duration-300 group-focus-within:w-full" />
                     </div>
                   </div>
 
-                  <div className="grid md:grid-cols-2 gap-8">
-                    <div className="space-y-2">
-                      <label className="text-[11px] font-sans font-medium uppercase tracking-[-0.1em] text-black/40">예상 예산</label>
-                      <select 
-                        name="budget"
-                        required
-                        className="w-full bg-transparent border-b border-black/10 py-3 appearance-none focus:border-brand outline-none transition-colors cursor-pointer text-sm font-sans text-black"
-                      >
-                        <option value="" className="bg-white">예산 범위 선택</option>
-                        <option value="100-500" className="bg-white">100만원 - 500만원 (SME 플랜)</option>
-                        <option value="1000-3000" className="bg-white">1,000만원 - 3,000만원</option>
-                        <option value="5000+" className="bg-white">5,000만원 이상</option>
-                      </select>
+                  <div className="grid md:grid-cols-2 gap-10">
+                    <div className="relative group">
+                      <label className="text-[10px] font-sans font-bold uppercase tracking-widest text-black/40 block mb-1">Budget Range</label>
+                      <div className="relative">
+                        <select 
+                          name="budget"
+                          required
+                          className="w-full bg-transparent border-b-2 border-black/5 py-4 appearance-none focus:border-brand outline-none transition-all duration-300 cursor-pointer text-base font-medium text-black"
+                        >
+                          <option value="" className="bg-white">예산 범위 선택</option>
+                          <option value="100-500" className="bg-white text-sm">100만원 - 500만원 (SME)</option>
+                          <option value="1000-3000" className="bg-white text-sm">1,000만원 - 3,000만원</option>
+                          <option value="5000+" className="bg-white text-sm">5,000만원 이상</option>
+                        </select>
+                        <div className="absolute right-0 top-1/2 -translate-y-1/2 pointer-events-none opacity-20">
+                          <svg width="12" height="8" viewBox="0 0 12 8" fill="none"><path d="M1 1L6 6L11 1" stroke="currentColor" strokeWidth="2"/></svg>
+                        </div>
+                      </div>
+                      <div className="absolute bottom-0 left-0 w-0 h-0.5 bg-brand transition-all duration-300 group-focus-within:w-full" />
                     </div>
-                    <div className="space-y-2">
-                      <label className="text-[11px] font-sans font-medium uppercase tracking-[-0.1em] text-black/40">제작 목적</label>
+                    <div className="relative group">
+                      <label className="text-[10px] font-sans font-bold uppercase tracking-widest text-black/40 block mb-1">Objective</label>
                       <input 
                         type="text" 
                         name="purpose"
                         required
                         placeholder="예: TVCF, SNS 바이럴, 오리지널" 
-                        className="w-full bg-transparent border-b border-black/10 py-3 focus:border-brand outline-none transition-colors text-sm text-black"
+                        className="w-full bg-transparent border-b-2 border-black/5 py-4 focus:border-brand outline-none transition-all duration-300 text-base text-black placeholder:text-black/20 font-medium"
                       />
+                      <div className="absolute bottom-0 left-0 w-0 h-0.5 bg-brand transition-all duration-300 group-focus-within:w-full" />
                     </div>
                   </div>
 
-                  <div className="space-y-2">
-                    <label className="text-[11px] font-sans font-medium uppercase tracking-[-0.1em] text-black/40">레퍼런스 링크</label>
+                  <div className="relative group">
+                    <label className="text-[10px] font-sans font-bold uppercase tracking-widest text-black/40 block mb-1">Reference Link</label>
                     <input 
                       type="url" 
                       name="reference_link"
-                      placeholder="제작하고 싶은 스타일의 영상 링크를 보내주세요." 
-                      className="w-full bg-transparent border-b border-black/10 py-3 focus:border-brand outline-none transition-colors text-sm text-black"
+                      placeholder="제작하고 싶은 스타일의 영상 링크 (YouTube, Vimeo 등)" 
+                      className="w-full bg-transparent border-b-2 border-black/5 py-4 focus:border-brand outline-none transition-all duration-300 text-base text-black placeholder:text-black/20 font-medium"
                     />
+                    <div className="absolute bottom-0 left-0 w-0 h-0.5 bg-brand transition-all duration-300 group-focus-within:w-full" />
                   </div>
 
-                  <div className="pt-6">
+                  <div className="pt-4">
                     <button 
                       type="submit" 
                       disabled={status === 'submitting'}
-                      className="w-full py-5 bg-black hover:bg-brand disabled:bg-black/40 text-white font-bold uppercase tracking-widest transition-all rounded-sm flex items-center justify-center gap-3 shadow-lg shadow-black/10"
+                      className="group relative w-full py-6 bg-black text-white font-bold uppercase tracking-[0.2em] text-sm overflow-hidden rounded-xl transition-all hover:scale-[1.02] active:scale-[0.98] disabled:opacity-50 disabled:scale-100 shadow-2xl shadow-black/20"
                     >
-                      {status === 'submitting' ? '전송 중...' : '제작 예약 신청'}
-                      <Send size={18} />
+                      <div className="absolute inset-0 bg-brand translate-y-full group-hover:translate-y-0 transition-transform duration-500 ease-out" />
+                      <span className="relative z-10 flex items-center justify-center gap-3">
+                        {status === 'submitting' ? (
+                          <>
+                            <div className="w-5 h-5 border-2 border-white/20 border-t-white rounded-full animate-spin" />
+                            전송 중...
+                          </>
+                        ) : (
+                          <>
+                            제작 예약 신청
+                            <Send size={18} className="transition-transform group-hover:translate-x-1 group-hover:-translate-y-1" />
+                          </>
+                        )}
+                      </span>
                     </button>
-                    {status === 'error' && (
-                      <p className="mt-4 text-xs text-red-500 text-center font-sans">전송에 실패했습니다. 이메일(aik@aikcontents.com)로 문의 부탁드립니다.</p>
-                    )}
+                    
+                    <AnimatePresence>
+                      {status === 'error' && (
+                        <motion.p 
+                          initial={{ opacity: 0, y: 10 }}
+                          animate={{ opacity: 1, y: 0 }}
+                          exit={{ opacity: 0 }}
+                          className="mt-6 text-xs text-red-500 text-center font-bold uppercase tracking-tight"
+                        >
+                          전송에 실패했습니다. <a href="mailto:aik@aikcontents.com" className="underline underline-offset-4">aik@aikcontents.com</a>으로 직접 문의 부탁드립니다.
+                        </motion.p>
+                      )}
+                    </AnimatePresence>
                   </div>
                 </motion.form>
               )}
