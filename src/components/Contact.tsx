@@ -33,8 +33,14 @@ export default function Contact() {
   };
 
   return (
-    <section id="contact" className="py-12 bg-white">
-      <div className="max-w-7xl mx-auto px-6">
+    <section id="contact" className="py-12 bg-white relative overflow-hidden isolate">
+      {/* Background Image with 15% opacity and horizontal flip */}
+      <div 
+        className="absolute inset-0 -z-10 opacity-[0.15] bg-cover bg-center bg-no-repeat -scale-x-100"
+        style={{ backgroundImage: 'url("https://lh3.googleusercontent.com/d/1OZOp4rXdAuxwF0HV8QDfveRK_KhytvaO")' }}
+      />
+      
+      <div className="max-w-7xl mx-auto px-6 relative z-10">
         <div className="grid lg:grid-cols-2 gap-12 items-center">
           <motion.div
             initial={{ opacity: 0, x: -30 }}
@@ -48,9 +54,8 @@ export default function Contact() {
             </h2>
             
             <div>
-              <p className="text-black/40 font-sans font-medium text-xs uppercase tracking-[-0.02em] mb-4">문의</p>
-              <p className="text-2xl font-display font-medium tracking-[-0.03em] text-black">aik@aikcontents.kr</p>
-              <p className="mt-4 text-sm text-black font-sans">
+              <p className="inline-block px-6 py-3 text-[1.35rem] font-display font-bold tracking-[-0.03em] bg-[#0c468c] text-white rounded-lg shadow-xl">문의 : aik@aikcontents.kr</p>
+              <p className="mt-4 text-[0.96rem] text-black font-sans">
                 AIK 콘텐츠는 이메일, 온라인 문의 이후 전화상담이 진행됩니다.
               </p>
             </div>
@@ -104,24 +109,24 @@ export default function Contact() {
                 >
                   <div className="grid md:grid-cols-2 gap-10">
                     <div className="relative group">
-                      <label className="text-[10px] font-sans font-bold uppercase tracking-widest text-black/40 block mb-1">Company / Name</label>
+                      <label className="text-[10px] font-sans font-bold uppercase tracking-widest text-black block mb-1">Company / Name</label>
                       <input 
                         type="text" 
                         name="company_name"
                         required
                         placeholder="업체명 또는 성함" 
-                        className="w-full bg-transparent border-b-2 border-black/5 py-4 focus:border-brand outline-none transition-all duration-300 text-base text-black placeholder:text-black/20 font-medium"
+                        className="w-full bg-transparent border-b-2 border-black/10 py-4 focus:border-brand outline-none transition-all duration-300 text-base text-black placeholder:text-black/40 font-medium"
                       />
                       <div className="absolute bottom-0 left-0 w-0 h-0.5 bg-brand transition-all duration-300 group-focus-within:w-full" />
                     </div>
                     <div className="relative group">
-                      <label className="text-[10px] font-sans font-bold uppercase tracking-widest text-black/40 block mb-1">Contact</label>
+                      <label className="text-[10px] font-sans font-bold uppercase tracking-widest text-black block mb-1">Contact</label>
                       <input 
                         type="text" 
                         name="contact_info"
                         required
                         placeholder="이메일 또는 전화번호" 
-                        className="w-full bg-transparent border-b-2 border-black/5 py-4 focus:border-brand outline-none transition-all duration-300 text-base text-black placeholder:text-black/20 font-medium"
+                        className="w-full bg-transparent border-b-2 border-black/10 py-4 focus:border-brand outline-none transition-all duration-300 text-base text-black placeholder:text-black/40 font-medium"
                       />
                       <div className="absolute bottom-0 left-0 w-0 h-0.5 bg-brand transition-all duration-300 group-focus-within:w-full" />
                     </div>
@@ -129,7 +134,7 @@ export default function Contact() {
 
                   <div className="grid md:grid-cols-2 gap-10">
                     <div className="relative group">
-                      <label className="text-[10px] font-sans font-bold uppercase tracking-widest text-black/40 block mb-1">Budget Range</label>
+                      <label className="text-[10px] font-sans font-bold uppercase tracking-widest text-black block mb-1">Budget Range</label>
                       <div className="relative">
                         <select 
                           name="budget"
@@ -148,25 +153,25 @@ export default function Contact() {
                       <div className="absolute bottom-0 left-0 w-0 h-0.5 bg-brand transition-all duration-300 group-focus-within:w-full" />
                     </div>
                     <div className="relative group">
-                      <label className="text-[10px] font-sans font-bold uppercase tracking-widest text-black/40 block mb-1">Objective</label>
+                      <label className="text-[10px] font-sans font-bold uppercase tracking-widest text-black block mb-1">Objective</label>
                       <input 
                         type="text" 
                         name="purpose"
                         required
                         placeholder="예: TVCF, SNS 바이럴, 오리지널" 
-                        className="w-full bg-transparent border-b-2 border-black/5 py-4 focus:border-brand outline-none transition-all duration-300 text-base text-black placeholder:text-black/20 font-medium"
+                        className="w-full bg-transparent border-b-2 border-black/10 py-4 focus:border-brand outline-none transition-all duration-300 text-base text-black placeholder:text-black/40 font-medium"
                       />
                       <div className="absolute bottom-0 left-0 w-0 h-0.5 bg-brand transition-all duration-300 group-focus-within:w-full" />
                     </div>
                   </div>
 
                   <div className="relative group">
-                    <label className="text-[10px] font-sans font-bold uppercase tracking-widest text-black/40 block mb-1">Reference Link</label>
+                    <label className="text-[10px] font-sans font-bold uppercase tracking-widest text-black block mb-1">Reference Link</label>
                     <input 
                       type="url" 
                       name="reference_link"
                       placeholder="제작하고 싶은 스타일의 영상 링크 (YouTube, Vimeo 등)" 
-                      className="w-full bg-transparent border-b-2 border-black/5 py-4 focus:border-brand outline-none transition-all duration-300 text-base text-black placeholder:text-black/20 font-medium"
+                      className="w-full bg-transparent border-b-2 border-black/10 py-4 focus:border-brand outline-none transition-all duration-300 text-base text-black placeholder:text-black/40 font-medium"
                     />
                     <div className="absolute bottom-0 left-0 w-0 h-0.5 bg-brand transition-all duration-300 group-focus-within:w-full" />
                   </div>
