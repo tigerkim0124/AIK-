@@ -55,8 +55,8 @@ export default function Contact() {
             
             <div>
               <p className="inline-block px-6 py-3 text-[1.35rem] font-display font-bold tracking-[-0.03em] bg-black/65 text-white rounded-lg shadow-xl">문의 : aik@aikcontents.kr</p>
-              <p className="mt-3 inline-block px-4 py-2 text-[0.935rem] bg-black/[0.13] text-black font-sans rounded-lg">
-                AIK 콘텐츠는 이메일, 온라인 문의 이후 전화상담이 진행됩니다.
+              <p className="mt-3 text-[1.0285rem] text-[#2a2a2a] font-sans font-bold tracking-[-0.05em]">
+                이메일, 온라인 문의 이후 전화상담이 진행됩니다.
               </p>
             </div>
           </motion.div>
