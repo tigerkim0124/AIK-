@@ -153,7 +153,7 @@ export default function Hero() {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.5, duration: 0.8 }}
-            className="max-w-3xl mx-auto text-[1.02rem] md:text-[1.16rem] lg:text-[1.3rem] text-black/80 font-display font-medium leading-relaxed tracking-normal"
+            className="max-w-3xl mx-auto text-[0.92rem] md:text-[1.04rem] lg:text-[1.17rem] text-black/80 font-display font-medium leading-relaxed tracking-normal"
           >
             - 우리는 AI기술의 정점에서 따뜻한 인간의 감성을 더합니다 -<br className="hidden md:block" />
             - 우리는 따뜻한 디지털 영상 경험을 설계합니다 -
@@ -167,14 +167,14 @@ export default function Hero() {
           >
             <a 
               href="#portfolio"
-              className="group relative w-full sm:w-auto px-12 py-5 bg-[#0c468c] text-white font-bold uppercase tracking-widest transition-all rounded-full overflow-hidden shadow-xl shadow-[#0c468c]/10"
+              className="group relative w-full sm:w-auto px-12 py-5 bg-black text-white font-bold uppercase tracking-widest transition-all rounded-full overflow-hidden shadow-xl shadow-black/10"
             >
               <span className="relative z-10 group-hover:text-black transition-colors duration-300">포트폴리오 보기</span>
               <div className="absolute inset-0 bg-white translate-y-full group-hover:translate-y-0 transition-transform duration-300 ease-out" />
             </a>
             <a 
               href="#contact"
-              className="w-full sm:w-auto px-12 py-5 bg-white text-black border border-black/10 font-bold uppercase tracking-widest hover:bg-[#0c468c] hover:text-white hover:border-[#0c468c] transition-all rounded-full shadow-lg shadow-black/5"
+              className="w-full sm:w-auto px-12 py-5 border border-black/10 text-black/80 font-bold uppercase tracking-widest hover:border-brand hover:text-brand transition-all rounded-full backdrop-blur-sm"
             >
               제작 문의하기
             </a>
